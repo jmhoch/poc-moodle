@@ -93,7 +93,7 @@ $CFG->dboptions = array(
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = $_ENV'[OS_domain'];
+$CFG->wwwroot   = $_ENV['OS_domain'];
 
 
 //=========================================================================
