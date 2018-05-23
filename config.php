@@ -40,10 +40,10 @@ $CFG = new stdClass();
 
 $CFG->dbtype    = 'pgsql';      // 'pgsql', 'mariadb', 'mysqli', 'sqlsrv' or 'oci'
 $CFG->dblibrary = 'native';     // 'native' only at the moment
-$CFG->dbhost    = $_SERVER'[OS_db_host'];  // eg 'localhost' or 'db.isp.com' or IP
-$CFG->dbname    = $_SERVER'[OS_db_name'];     // database name, eg moodle
-$CFG->dbuser    = $_SERVER'[OS_db_user'];   // your database username
-$CFG->dbpass    = $_SERVER'[OS_db_password'];   // your database password
+$CFG->dbhost    = $_ENV'[OS_db_host'];  // eg 'localhost' or 'db.isp.com' or IP
+$CFG->dbname    = $_ENV'[OS_db_name'];     // database name, eg moodle
+$CFG->dbuser    = $_ENV'[OS_db_user'];   // your database username
+$CFG->dbpass    = $$_ENV'[OS_db_password'];   // your database password
 $CFG->prefix    = 'mdl_';       // prefix to use for all table names
 $CFG->dboptions = array(
     'dbpersist' => false,       // should persistent database connections be
@@ -56,7 +56,7 @@ $CFG->dboptions = array(
                                 //  (please note mysql is always using socket
                                 //  if dbhost is 'localhost' - if you need
                                 //  local port connection use '127.0.0.1')
-    'dbport'    => $_SERVER['OS_db_port'],          // the TCP port number to use when connecting
+    'dbport'    => $_ENV['OS_db_port'],          // the TCP port number to use when connecting
                                 //  to the server. keep empty string for the
                                 //  default port
     'dbhandlesoptions' => false,// On PostgreSQL poolers like pgbouncer don't
@@ -93,7 +93,7 @@ $CFG->dboptions = array(
 // If you need both intranet and Internet access please read
 // http://docs.moodle.org/en/masquerading
 
-$CFG->wwwroot   = $_SERVER'[OS_domain'];
+$CFG->wwwroot   = $_ENV'[OS_domain'];
 
 
 //=========================================================================
