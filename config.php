@@ -109,7 +109,7 @@ $CFG->wwwroot   = $_ENV['OS_domain'];
 //
 // - On Windows systems you might specify something like 'c:\moodledata'
 
-$CFG->dataroot  = $_SERVER'[OS_app_path'];
+$CFG->dataroot  = $_SERVER['OS_app_path'];
 
 
 //=========================================================================
