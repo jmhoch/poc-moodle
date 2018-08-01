@@ -27,6 +27,7 @@
 //          http://www.gnu.org/copyleft/gpl.html                         //
 //                                                                       //
 ///////////////////////////////////////////////////////////////////////////
+ini_set('memory_limit', '256M');
 unset($CFG);  // Ignore this line
 global $CFG;  // This is necessary here for PHPUnit execution
 $CFG = new stdClass();
