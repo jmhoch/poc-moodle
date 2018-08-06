@@ -1,4 +1,0 @@
-## SSL Moodle Config ##
-RewriteEngine On
-RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://moodle-app-poc-moodle.devapps.liberty.edu/$1 [R,L]
